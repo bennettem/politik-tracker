@@ -1,11 +1,8 @@
-<p>resource tracker cards will go here</p>
-
-<div>
-  <div>
-    <img [src]="imagePath" [alt]="selectedResource.name + ' ' + 'Resource' + ' ' + 'Icon'" />
-    <span>{{ selectedResource.name }}</span>
+<div class="resource-item">
+  <div class="img-wrapper">
+    <img [src]="imagePath" [alt]="selectedResource()?.name + ' Resource Icon'" />
   </div>
-  <div>
-    <p>input counter goes here</p>
-  </div>
+</div>
+<div class="resource-counter">
+  <input type="number" id="counter" min="0" max="1000" value="0" />
 </div>

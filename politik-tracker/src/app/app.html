@@ -1,11 +1,17 @@
 <app-header-component />
 
 <main>
-  <ul id="resources">
+  <ul id="resources" class="resource-cards">
     @for (resource of resources; track resource.name) {
-      <li>
+      <li class="resource-card">
+        <!-- should move the resource name in the component somehow? -->
         {{ resource.name }}
-        <app-resource-tracker [selectedResource]="resource.index" />
+        <!-- <app-resource-tracker [selectedResource]="resource.index" /> -->
+        <app-resource-tracker [selectedResource]="resource" class="resource-items-wrapper" />
+        <!-- <app-resource-tracker class="resource-items-wrapper">
+          <div class="resource-item"></div>
+          <div class="resource-counter"></div>
+        </app-resource-tracker> -->
       </li>
     } @empty {
       <li>There are no items.</li>
