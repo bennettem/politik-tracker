@@ -17,7 +17,7 @@
   margin: 0;
   width: 100%;
   max-width: 200px;
-  padding: 15px;
+  padding: 10px 15px;
 }
 .resource-counter input[type=number]::-webkit-inner-spin-button,
 .resource-counter input[type=number]::-webkit-outer-spin-button {
@@ -29,9 +29,11 @@
   flex: 1 1 200px;
 }
 .resource-item .img-wrapper {
+  background-color: black;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: clamp(50px, 5vw, 80px);
+  height: clamp(50px, 5vw, 80px);
+  border-radius: 50%;
 }
 .resource-item .img-wrapper img {
   display: block;
@@ -42,4 +44,8 @@
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 6px;
 }/*# sourceMappingURL=resource-tracker.css.map */

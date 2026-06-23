@@ -17,7 +17,7 @@
     margin: 0;
     width: 100%;
     max-width: 200px;
-    padding: 15px;
+    padding: 10px 15px;
   }
 
   input[type='number']::-webkit-inner-spin-button,
@@ -30,9 +30,11 @@
 .resource-item {
   flex: 1 1 200px;
   .img-wrapper {
+    background-color: black;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: clamp(50px, 5vw, 80px);
+    height: clamp(50px, 5vw, 80px);
+    border-radius: 50%;
 
     img {
       display: block;
@@ -41,6 +43,10 @@
       height: 100%;
       object-fit: contain;
       object-position: center;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      padding: 6px;
     }
   }
 }

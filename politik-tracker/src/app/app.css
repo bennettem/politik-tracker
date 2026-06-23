@@ -6,6 +6,9 @@
   gap: 15px;
   max-width: 1000px;
   margin-inline: auto;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 2.1px;
 }
 .resource-cards .resource-card {
   padding-block: 25px;
@@ -18,4 +21,6 @@
 .resource-cards .resource-card .resource-items-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
 }/*# sourceMappingURL=app.css.map */
