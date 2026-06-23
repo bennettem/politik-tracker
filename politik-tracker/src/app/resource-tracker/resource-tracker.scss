@@ -28,6 +28,9 @@
 }
 
 .resource-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   flex: 1 1 200px;
   .img-wrapper {
     background-color: black;
