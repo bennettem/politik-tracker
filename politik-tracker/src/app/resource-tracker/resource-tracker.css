@@ -2,6 +2,11 @@
   flex: 1 1 200px;
   display: flex;
   justify-content: end;
+  position: relative;
+}
+.resource-counter .btn svg {
+  width: 1.5em;
+  height: 1.5rem;
 }
 .resource-counter input {
   -webkit-appearance: none;
@@ -21,11 +26,17 @@
 }
 .resource-counter input[type=number]::-webkit-inner-spin-button,
 .resource-counter input[type=number]::-webkit-outer-spin-button {
-  opacity: 1;
-  height: 30px;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.resource-counter input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .resource-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   flex: 1 1 200px;
 }
 .resource-item .img-wrapper {

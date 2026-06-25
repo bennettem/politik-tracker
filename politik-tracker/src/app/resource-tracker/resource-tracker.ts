@@ -8,13 +8,20 @@ import { Resource } from '../resource';
   styleUrl: './resource-tracker.scss',
 })
 export class ResourceTracker {
-  // You can explicitly declare a type for the input by specifying a generic parameter to the function. If an input without a default value is not set, its value is undefined:
-  //Components>accepting data input docs
   selectedResource = input<Resource>();
+  count = 0;
+  maxLimit = 20000;
 
   get imagePath() {
-    // image path is getter optional "chaining"
     const resource = this.selectedResource();
     return resource ? './assets/resources/' + resource.name + 'Icon.png' : '';
+  }
+
+  handleIncrement() {
+    this.count = Math.min(this.count + 1, this.maxLimit);
+  }
+
+  handleDecrement() {
+    this.count = this.count - 1;
   }
 }

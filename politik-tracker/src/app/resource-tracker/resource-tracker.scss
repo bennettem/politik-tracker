@@ -2,6 +2,15 @@
   flex: 1 1 200px;
   display: flex;
   justify-content: end;
+  position: relative;
+
+  .btn {
+    // position: absolute;
+    svg {
+      width: 1.5em;
+      height: 1.5rem;
+    }
+  }
 
   input {
     -webkit-appearance: none;
@@ -22,8 +31,12 @@
 
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
-    opacity: 1;
-    height: 30px;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
   }
 }
 
