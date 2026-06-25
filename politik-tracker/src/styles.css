@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: black;
   background-image: url("/assets/backgrounds/politik-bg.png");
   background-size: cover;
   background-repeat: no-repeat;

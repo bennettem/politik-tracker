@@ -13,7 +13,7 @@
 .resource-cards .resource-card {
   padding-block: 25px;
   padding-inline: 35px;
-  background-image: url("./assets/backgrounds/card-bg.png");
+  background-image: url("/assets/backgrounds/card-bg.png");
   background-color: #f6f6ff;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
