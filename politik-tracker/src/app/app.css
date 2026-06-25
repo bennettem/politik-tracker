@@ -18,9 +18,20 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
+@media only screen and (max-width: 500px) {
+  .resource-cards .resource-card {
+    padding-bottom: 33px;
+  }
+}
 .resource-cards .resource-card .resource-items-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
+}
+@media only screen and (max-width: 500px) {
+  .resource-cards .resource-card .resource-items-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -4,6 +4,15 @@
   justify-content: end;
   position: relative;
   max-width: 200px;
+  min-width: 200px;
+  max-height: 53px;
+  overflow: clip;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+  @media only screen and (max-width: 500px) {
+    flex: unset;
+  }
 
   .btn {
     display: flex;
@@ -14,7 +23,7 @@
     height: 53px;
     width: 40px;
     appearance: none;
-    background: transparent;
+    background: #2c2d2d;
     border: none;
     color: inherit;
     font: inherit;
@@ -24,13 +33,16 @@
     letter-spacing: inherit;
     line-height: inherit;
     cursor: pointer;
+    transition: 0.3s ease;
 
     &::-moz-focus-inner {
       border: 0;
       padding: 0;
     }
+    &:hover,
     &:focus {
       outline: none;
+      background: #4d86ec;
     }
 
     &:focus-visible {
@@ -44,10 +56,10 @@
     }
 
     &.decrease {
-      right: 0;
+      left: 0;
     }
     &.increase {
-      left: 0;
+      right: 0;
     }
   }
 
@@ -60,12 +72,14 @@
     border-radius: 4px;
     box-shadow: none;
     outline: none;
+    border: none;
     color: inherit;
     font: inherit;
     margin: 0;
     width: 100%;
     max-width: 200px;
-    padding: 10px 15px 10px 45px;
+    padding: 10px 45px;
+    text-align: center;
   }
 
   input[type='number']::-webkit-inner-spin-button,
@@ -84,12 +98,21 @@
   flex-direction: column;
   gap: 15px;
   flex: 1 1 200px;
+
+  @media only screen and (max-width: 500px) {
+    flex: unset;
+  }
+
   .img-wrapper {
     background-color: black;
     position: relative;
     width: clamp(50px, 5vw, 80px);
     height: clamp(50px, 5vw, 80px);
     border-radius: 50%;
+
+    @media only screen and (max-width: 500px) {
+      margin-inline: auto;
+    }
 
     img {
       display: block;

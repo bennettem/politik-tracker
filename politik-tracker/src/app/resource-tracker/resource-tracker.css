@@ -4,6 +4,16 @@
   justify-content: end;
   position: relative;
   max-width: 200px;
+  min-width: 200px;
+  max-height: 53px;
+  overflow: clip;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+@media only screen and (max-width: 500px) {
+  .resource-counter {
+    flex: unset;
+  }
 }
 .resource-counter .btn {
   display: flex;
@@ -16,7 +26,7 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: transparent;
+  background: #2c2d2d;
   border: none;
   color: inherit;
   font: inherit;
@@ -26,13 +36,15 @@
   letter-spacing: inherit;
   line-height: inherit;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .resource-counter .btn::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-.resource-counter .btn:focus {
+.resource-counter .btn:hover, .resource-counter .btn:focus {
   outline: none;
+  background: #4d86ec;
 }
 .resource-counter .btn:focus-visible {
   outline: 2px solid dashed currentColor;
@@ -43,10 +55,10 @@
   height: 1.5rem;
 }
 .resource-counter .btn.decrease {
-  right: 0;
+  left: 0;
 }
 .resource-counter .btn.increase {
-  left: 0;
+  right: 0;
 }
 .resource-counter input {
   -webkit-appearance: none;
@@ -57,12 +69,14 @@
   border-radius: 4px;
   box-shadow: none;
   outline: none;
+  border: none;
   color: inherit;
   font: inherit;
   margin: 0;
   width: 100%;
   max-width: 200px;
-  padding: 10px 15px 10px 45px;
+  padding: 10px 45px;
+  text-align: center;
 }
 .resource-counter input[type=number]::-webkit-inner-spin-button,
 .resource-counter input[type=number]::-webkit-outer-spin-button {
@@ -79,12 +93,22 @@
   gap: 15px;
   flex: 1 1 200px;
 }
+@media only screen and (max-width: 500px) {
+  .resource-item {
+    flex: unset;
+  }
+}
 .resource-item .img-wrapper {
   background-color: black;
   position: relative;
   width: clamp(50px, 5vw, 80px);
   height: clamp(50px, 5vw, 80px);
   border-radius: 50%;
+}
+@media only screen and (max-width: 500px) {
+  .resource-item .img-wrapper {
+    margin-inline: auto;
+  }
 }
 .resource-item .img-wrapper img {
   display: block;

@@ -5,14 +5,21 @@
   </div>
 </div>
 <div class="resource-counter">
-  <button (click)="handleCounter('minus')" type="button" id="decrease" class="btn decrease">
+  <button
+    (mousedown)="startCounter('minus')"
+    (mouseup)="stopCounter()"
+    (mouseleave)="stopCounter()"
+    type="button"
+    id="decrease"
+    class="btn decrease"
+  >
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
         <path
           d="M6 12L18 12"
-          stroke="#242323"
+          stroke="#f7f5e9"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -28,14 +35,21 @@
     [(ngModel)]="count"
     (change)="onInputChange()"
   />
-  <button (click)="handleCounter('plus')" type="button" id="increase" class="btn increase">
+  <button
+    (mousedown)="startCounter('plus')"
+    (mouseup)="stopCounter()"
+    (mouseleave)="stopCounter()"
+    type="button"
+    id="increase"
+    class="btn increase"
+  >
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
         <path
           d="M6 12H18M12 6V18"
-          stroke="#242323"
+          stroke="#f7f5e9"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
