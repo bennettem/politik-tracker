@@ -74,7 +74,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/politik-tracker/"
+            "baseHref": "https://bennettem.github.io/politik-tracker/"
           }
         }
       }
