@@ -39,13 +39,12 @@
       border: 0;
       padding: 0;
     }
-
+    &:hover,
     &:focus {
       outline: none;
-    }
-
-    &:hover {
-      background: #4d86ec;
+      @media only screen and (min-width: 501px) {
+        background: #4d86ec;
+      }
     }
 
     &:focus-visible {
