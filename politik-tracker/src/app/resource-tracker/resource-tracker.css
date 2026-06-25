@@ -3,10 +3,50 @@
   display: flex;
   justify-content: end;
   position: relative;
+  max-width: 200px;
+}
+.resource-counter .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  height: 53px;
+  width: 40px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+.resource-counter .btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.resource-counter .btn:focus {
+  outline: none;
+}
+.resource-counter .btn:focus-visible {
+  outline: 2px solid dashed currentColor;
+  outline-offset: 2px;
 }
 .resource-counter .btn svg {
   width: 1.5em;
   height: 1.5rem;
+}
+.resource-counter .btn.decrease {
+  right: 0;
+}
+.resource-counter .btn.increase {
+  left: 0;
 }
 .resource-counter input {
   -webkit-appearance: none;
@@ -22,7 +62,7 @@
   margin: 0;
   width: 100%;
   max-width: 200px;
-  padding: 10px 15px;
+  padding: 10px 15px 10px 45px;
 }
 .resource-counter input[type=number]::-webkit-inner-spin-button,
 .resource-counter input[type=number]::-webkit-outer-spin-button {
