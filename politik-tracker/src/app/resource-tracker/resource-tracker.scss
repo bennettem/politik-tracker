@@ -39,9 +39,12 @@
       border: 0;
       padding: 0;
     }
-    &:hover,
+
     &:focus {
       outline: none;
+    }
+
+    &:hover {
       background: #4d86ec;
     }
 

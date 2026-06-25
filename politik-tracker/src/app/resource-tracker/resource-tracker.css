@@ -42,8 +42,10 @@
   border: 0;
   padding: 0;
 }
-.resource-counter .btn:hover, .resource-counter .btn:focus {
+.resource-counter .btn:focus {
   outline: none;
+}
+.resource-counter .btn:hover {
   background: #4d86ec;
 }
 .resource-counter .btn:focus-visible {
