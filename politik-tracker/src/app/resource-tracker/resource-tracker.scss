@@ -40,7 +40,7 @@
       padding: 0;
     }
     &:hover,
-    &:focus {
+    &:focus-visible {
       outline: none;
       @media only screen and (min-width: 501px) {
         background: #4d86ec;
@@ -95,26 +95,45 @@
   }
 }
 
+.mobile-name {
+  grid-column: span 2;
+  @media only screen and (min-width: 501px) {
+    display: none;
+  }
+}
+
 .resource-item {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
   gap: 15px;
   flex: 1 1 200px;
 
   @media only screen and (max-width: 500px) {
     flex: unset;
+    flex-direction: row-reverse;
+    align-items: center;
+    // margin-inline: auto;
+  }
+
+  .desktop-name {
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
   }
 
   .img-wrapper {
     background-color: black;
     position: relative;
-    width: clamp(50px, 5vw, 80px);
-    height: clamp(50px, 5vw, 80px);
+    width: clamp(35px, 9vw, 80px);
+    height: clamp(35px, 9vw, 80px);
     border-radius: 50%;
 
-    @media only screen and (max-width: 500px) {
-      margin-inline: auto;
-    }
+    // @media only screen and (max-width: 500px) {
+    //   margin-inline: auto;
+    // }
 
     img {
       display: block;

@@ -6,20 +6,20 @@
   gap: 15px;
   max-width: 1000px;
   margin-inline: auto;
-  font-size: 23px;
+  font-size: clamp(16px, 3.5vw, 23px);
   font-weight: 600;
   letter-spacing: 2.1px;
 
   .resource-card {
     padding-block: 25px;
-    padding-inline: 35px;
+    padding-inline: clamp(15px, 4vw, 35px);
     background-image: url('../assets/backgrounds/card-bg.png');
     background-color: #f6f6ff;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
     @media only screen and (max-width: 500px) {
-      padding-bottom: 33px;
+      padding-block: 18px 22px;
     }
 
     .resource-items-wrapper {
@@ -29,8 +29,9 @@
       gap: 25px;
 
       @media only screen and (max-width: 500px) {
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
     }
   }
