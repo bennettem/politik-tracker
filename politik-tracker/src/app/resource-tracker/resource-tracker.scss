@@ -20,6 +20,7 @@
     justify-content: center;
     position: absolute;
     top: 0;
+    bottom: 0;
     height: 53px;
     width: 40px;
     appearance: none;
@@ -55,6 +56,8 @@
     svg {
       width: 1.5em;
       height: 1.5rem;
+      transform: translate(0px, 0px);
+      -webkit-transform: translate(0px, 0px);
     }
 
     &.decrease {
@@ -104,7 +107,6 @@
 
 .resource-item {
   display: flex;
-  // flex-direction: column;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
@@ -130,10 +132,7 @@
     width: clamp(35px, 9vw, 80px);
     height: clamp(35px, 9vw, 80px);
     border-radius: 50%;
-
-    // @media only screen and (max-width: 500px) {
-    //   margin-inline: auto;
-    // }
+    pointer-events: none;
 
     img {
       display: block;
