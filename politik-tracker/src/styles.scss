@@ -17,4 +17,7 @@ body {
   padding-block: 15px 160px;
   font-family: 'Cinzel';
   margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
