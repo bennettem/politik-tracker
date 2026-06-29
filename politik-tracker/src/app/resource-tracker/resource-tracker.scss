@@ -9,19 +9,20 @@
   overflow: clip;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  touch-action: manipulation;
 
   @media only screen and (max-width: 500px) {
     flex: unset;
   }
 
   .btn {
+    touch-action: manipulation;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 53px;
     width: 40px;
     appearance: none;
     background: #2c2d2d;
@@ -68,6 +69,7 @@
   }
 
   input {
+    touch-action: manipulation;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -88,11 +90,13 @@
 
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
+    touch-action: manipulation;
     -webkit-appearance: none;
     margin: 0;
   }
 
   input[type='number'] {
+    touch-action: manipulation;
     -moz-appearance: textfield;
   }
 }
@@ -105,6 +109,7 @@
 }
 
 .resource-item {
+  touch-action: manipulation;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -126,6 +131,7 @@
   }
 
   .img-wrapper {
+    touch-action: manipulation;
     background-color: black;
     position: relative;
     width: clamp(35px, 9vw, 80px);
@@ -134,6 +140,7 @@
     pointer-events: none;
 
     img {
+      touch-action: manipulation;
       display: block;
       position: absolute;
       width: 100%;

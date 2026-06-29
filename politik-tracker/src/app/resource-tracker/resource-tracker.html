@@ -6,7 +6,17 @@
   </div>
 </div>
 <div class="resource-counter">
-  <button (click)="handleCounter('minus')" type="button" id="decrease" class="btn decrease">
+  <!-- <button (click)="handleCounter('minus')" type="button" id="decrease" class="btn decrease"> -->
+  <!-- add events to button -->
+  <button
+    (pointerdown)="startCounter('minus')"
+    (pointerup)="stopCounter()"
+    (pointerleave)="stopCounter()"
+    (pointercancel)="stopCounter()"
+    type="button"
+    id="decrease"
+    class="btn decrease"
+  >
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -26,10 +36,21 @@
     id="counter"
     min="0"
     max="20000"
-    [(ngModel)]="count"
+    readonly
+    [ngModel]="count()"
+    (ngModelChange)="count.set($event)"
     (change)="onInputChange()"
   />
-  <button (click)="handleCounter('plus')" type="button" id="increase" class="btn increase">
+  <!-- <button (click)="handleCounter('plus')" type="button" id="increase" class="btn increase"> -->
+  <button
+    (pointerdown)="startCounter('plus')"
+    (pointerup)="stopCounter()"
+    (pointerleave)="stopCounter()"
+    (pointercancel)="stopCounter()"
+    type="button"
+    id="increase"
+    class="btn increase"
+  >
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

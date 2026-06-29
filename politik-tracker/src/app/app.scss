@@ -9,6 +9,7 @@
   font-size: clamp(16px, 3.5vw, 23px);
   font-weight: 600;
   letter-spacing: 2.1px;
+  touch-action: manipulation;
 
   .resource-card {
     padding-block: 25px;
